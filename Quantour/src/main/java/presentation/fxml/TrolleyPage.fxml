@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" styleClass="navigationBackgroundColor" stylesheets="@../css/OpStock.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.TrolleyPageUIController">
+   <children>
+      <Pane prefHeight="93.0" prefWidth="350.0" styleClass="opStockHeadVBoxBackground">
+         <children>
+            <Label layoutX="131.0" layoutY="19.0" styleClass="stockIdLabel" text="已选股票" />
+            <Button layoutX="267.0" layoutY="33.0" mnemonicParsing="false" onAction="#deleteAllStock" styleClass="deleteAllStockButton" text="清空" />
+         </children>
+      </Pane>
+      <HBox prefHeight="362.0" prefWidth="320.0">
+         <children>
+            <TableView id="opStock" fx:id="tableView" prefHeight="301.0" prefWidth="350.0" stylesheets="@../css/Beauty.css">
+              <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="100.0" text="股票代码" />
+                <TableColumn fx:id="nameColumn" maxWidth="150.0" prefWidth="150.0" text="股票名称" />
+                <TableColumn id="deleteButtonColumn" fx:id="deleteButtonColumn" maxWidth="112.0" minWidth="82.0" prefWidth="82.0" text="删除已选" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</VBox>

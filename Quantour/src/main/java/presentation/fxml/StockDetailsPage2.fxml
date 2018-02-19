@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxWidth="960.0" minWidth="960.0" prefWidth="960.0" styleClass="navigationBackgroundColor" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.StockDetailsPageUIController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="250.0" prefWidth="200.0">
+         <children>
+            <Pane prefHeight="250.0" prefWidth="748.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="33.0" layoutY="35.0" prefHeight="180.0" prefWidth="180.0" spacing="15.0" styleClass="stockInfoVBoxBackground">
+                     <children>
+                        <Label fx:id="stockNameLabel" styleClass="stockNameLabel" text="深发展A" />
+                        <Label fx:id="stockIdLabel" styleClass="stockIdLabel" text="1" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="213.0" layoutY="35.0" prefHeight="180.0" prefWidth="180.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="stockPriceLabel" styleClass="stockPriceLabel" text="11.02" />
+                        <ImageView fx:id="stockPriceImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/rise.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane layoutX="393.0" layoutY="35.0" prefHeight="180.0" prefWidth="300.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="50.0" styleClass="stockOpenPriceLabel" text="开盘价：" />
+                        <Label layoutX="180.0" layoutY="50.0" styleClass="stockOpenPriceLabel" text="收盘价：" />
+                        <Label layoutX="20.0" layoutY="112.0" styleClass="stockOpenPriceLabel" text="最高价：" />
+                        <Label layoutX="180.0" layoutY="112.0" styleClass="stockOpenPriceLabel" text="最低价：" />
+                        <Label fx:id="stockOpenPriceLabel" layoutX="90.0" layoutY="49.0" styleClass="stockOpenPrice" text="11.02" />
+                        <Label fx:id="stockClosePriceLabel" layoutX="250.0" layoutY="49.0" styleClass="stockOpenPrice" text="11.16" />
+                        <Label fx:id="stockMaxPriceLabel" layoutX="90.0" layoutY="111.0" styleClass="stockOpenPrice" text="11.25" />
+                        <Label fx:id="stockMinPriceLabel" layoutX="250.0" layoutY="111.0" styleClass="stockOpenPrice" text="10.92" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="-105.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" styleClass="transButton">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="-60.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/verticalLine2.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addStockButton" layoutX="524.0" layoutY="201.0" mnemonicParsing="false" onAction="#addToOptionalStock" styleClass="confirmButton" text="加入自选股" visible="false">
+                     <graphic>
+                        <ImageView fx:id="addStockImageView" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <VBox fx:id="graphVBox" prefWidth="980.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="975.0" spacing="20.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="75.0" prefWidth="975.0" spacing="8.0" styleClass="stockRedBottom">
+               <children>
+                  <Pane prefHeight="72.0" prefWidth="200.0">
+                     <children>
+                        <ToggleButton fx:id="kLineButton" layoutY="37.0" minHeight="35.0" minWidth="65.0" mnemonicParsing="false" onAction="#toKLineChart" styleClass="stockPictureButton" text="K线图" />
+                        <ToggleButton fx:id="averageLineButton" layoutX="73.0" layoutY="37.0" minHeight="35.0" minWidth="65.0" mnemonicParsing="false" onAction="#toAverageLineChart" styleClass="stockPictureButton" text="均线图" />
+                        <Button fx:id="sliderLabel" layoutY="37.0" minHeight="35.0" minWidth="65.0" mnemonicParsing="false" text="K线图">
+                           <styleClass>
+                              <String fx:value="stockPictureButton" />
+                              <String fx:value="whiteBackground" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="70.0" prefWidth="699.0" spacing="30.0">
+                     <children>
+                        <DatePicker fx:id="startDatePicker" prefHeight="27.0" prefWidth="150.0" promptText="开始日期" />
+                        <DatePicker fx:id="endDatePicker" prefHeight="27.0" prefWidth="150.0" promptText="结束日期" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="100.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox fx:id="chartVBox" alignment="CENTER" maxWidth="975.0" minWidth="975.0" prefWidth="975.0">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="975.0" spacing="30.0">
+               <children>
+                  <TextField fx:id="compareStockName" prefHeight="35.0" prefWidth="250.0" promptText="输入添加比较股票的名称/id" styleClass="addCompareTextField" />
+                  <Button mnemonicParsing="false" onAction="#toCompare" styleClass="confirmButton" text="添加对比" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Beauty.css" />
+      <URL value="@../css/Main.css" />
+   </stylesheets>
+</VBox>

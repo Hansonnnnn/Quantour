@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="560.0" prefWidth="460.0" styleClass="loginBackgroundColor" stylesheets="@../css/Beauty.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.LoginPageUIController">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="460.0" styleClass="redBottomBorder">
+         <children>
+            <Button layoutX="400.0" layoutY="10.0" mnemonicParsing="false" onAction="#loginClose" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="460.0">
+         <children>
+            <Label id="userLoginLabel" text="用户登录" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="460.0">
+         <children>
+            <TextField prefHeight="45.0" prefWidth="400.0" promptText="请输入手机号或邮箱" styleClass="loginTextFieldStyle" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="460.0">
+         <children>
+            <TextField prefHeight="45.0" prefWidth="400.0" promptText="请输入登录密码" styleClass="loginTextFieldStyle" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="460.0">
+         <children>
+            <CheckBox id="userLoginCheckBox" mnemonicParsing="false" prefHeight="21.0" prefWidth="150.0" text="下次自动登录" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="267.0">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="confirmButton" text="注册" />
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="32.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="460.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="220.0" styleClass="confirmButton" text="安全登录" />
+         </children>
+      </HBox>
+      <HBox id="loginSeparator" alignment="CENTER" prefHeight="70.0" prefWidth="460.0">
+         <children>
+            <Label id="loginSeparator" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="452.0" text="--------------------      社交账号登录      --------------------" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="460.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/qq.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/weixin.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button mnemonicParsing="false" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/weibo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

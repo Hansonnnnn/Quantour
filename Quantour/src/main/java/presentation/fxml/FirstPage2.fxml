@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="mainVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" stylesheets="@../css/Beauty.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.FirstPageController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="1200.0">
+         <children>
+            <HBox prefHeight="65.0" prefWidth="1200.0" styleClass="headBackgroundColor">
+               <children>
+                  <Pane maxHeight="63.0" prefHeight="63.0" prefWidth="1200.0">
+                     <children>
+                        <Button layoutX="1000.0" layoutY="13.0" minHeight="35.0" minWidth="60.0" mnemonicParsing="false" onAction="#toLoginStage" styleClass="transButton">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/signIn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button layoutX="1145.0" layoutY="13.0" minHeight="35.0" minWidth="50.0" mnemonicParsing="false" onAction="#close" styleClass="transButton">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/cancel.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button layoutX="1100.0" layoutY="13.0" minHeight="35.0" minWidth="50.0" mnemonicParsing="false" onAction="#minimize" styleClass="transButton">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/min.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <TextField fx:id="searchTextField" layoutX="275.0" layoutY="15.0" minHeight="30.0" minWidth="280.0" onKeyReleased="#toShowPopup" promptText="输入股票代码，名称">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="headTextFieldText" />
+                              <String fx:value="textFieldFontColor" />
+                           </styleClass></TextField>
+                        <Button layoutX="512.0" layoutY="12.0" minHeight="30.0" mnemonicParsing="false" onAction="#search" styleClass="transButton">
+                           <graphic>
+                              <ImageView fx:id="searchNameButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1060.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/verticalLine.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="50.0" layoutY="15.0" styleClass="logoLabel" text="Quantour" />
+                        <ImageView fx:id="windImageView" fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/airport.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="redBottomBorder" />
+                        <String fx:value="headBackgroundColor" />
+                     </styleClass>
+                  </Pane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="655.0" prefWidth="1200.0">
+               <children>
+                  <Pane prefHeight="655.0" prefWidth="220.0">
+                     <children>
+                        <Label fx:id="sliderLabel" layoutY="200.0" minHeight="50.0" minWidth="220.0" styleClass="navigationSliderLabel" />
+                        <Button layoutY="200.0" minHeight="50.0" minWidth="220.0" mnemonicParsing="false" onAction="#toMarkerInfo" styleClass="navigationButton" text="市场情况">
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/market.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button layoutY="300.0" minHeight="50.0" minWidth="220.0" mnemonicParsing="false" onAction="#toStockCompare" styleClass="navigationButton" text="股票比较">
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/compare.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button layoutY="250.0" minHeight="50.0" minWidth="220.0" mnemonicParsing="false" onAction="#toStockDetails" styleClass="navigationButton" text="个股信息">
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/stock.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button layoutY="350.0" minHeight="50.0" minWidth="220.0" mnemonicParsing="false" onAction="#toHistoryRecord" styleClass="navigationButton" text="股票策略">
+                           <padding>
+                              <Insets right="40.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/record.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="trolleyButton" layoutX="20.0" layoutY="590.0" mnemonicParsing="false" onAction="#showTrolley" styleClass="trolleyButton" stylesheets="@../css/Main.css" text="0" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/stockList.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="navigationBackgroundColor" />
+                        <String fx:value="rightBorderColor" />
+                     </styleClass>
+                  </Pane>
+                  <VBox fx:id="contentVBox" alignment="TOP_RIGHT" prefHeight="655.0" prefWidth="980.0" styleClass="navigationBackgroundColor">
+                     <children>
+                        <ScrollPane fx:id="contentScrollPane" maxWidth="978.0" prefHeight="655.0" prefWidth="978.0" styleClass="navigationBackgroundColor" stylesheets="@../css/Beauty.css" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

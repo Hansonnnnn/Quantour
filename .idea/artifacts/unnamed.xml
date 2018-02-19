@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="unnamed">
+    <output-path>$USER_HOME$/Desktop/jar</output-path>
+    <root id="archive" name="unnamed.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Quantour/src/main/java/driver/Main.java" output-file-name="MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

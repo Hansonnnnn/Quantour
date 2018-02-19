@@ -1,0 +1,580 @@
+
+.transButton{
+    -fx-background-color:  transparent;
+}
+
+.labelFontSize{
+    -fx-font-size: 17px;
+}
+
+/**
+ *界面头部背景颜色
+ */
+.headBackgroundColor{
+    -fx-background-color: #222225;
+}
+
+/**
+ *设置下边界为红色
+ */
+.redBottomBorder{
+    -fx-border-color: #7A0C0C;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.headFontColor{
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.scroll-pane .viewpoint{
+    -fx-background-color: #222225;
+}
+
+.scroll-pane{
+    -fx-background: #191B1F;
+}
+
+/**
+ *设置导航栏背景色
+ */
+.navigationBackgroundColor{
+    -fx-background-color: #191B1F;
+}
+
+
+/**
+ *设置导航栏右边界为灰色
+ */
+.rightBorderColor{
+    -fx-border-color: #303030;
+    -fx-border-width: 0px 1px 0px 0px;
+}
+
+/**
+ *设置导航栏按钮样式
+ */
+.navigationButton{
+    -fx-background-color: transparent;
+    -fx-font-size: 17px;
+    -fx-text-fill: #AAACAF;
+}
+
+/**
+ *导航栏滑动标签
+ */
+.navigationSliderLabel{
+    -fx-background-color: #2B282C;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-border-color: #B82525;
+}
+
+
+/**
+ *设置股票搜索框的样式
+ */
+.headTextFieldText{
+    -fx-background-radius: 20px;
+    -fx-background-color: #161618;
+    -fx-border-radius: 20px;
+    -fx-text-fill: #404041;
+}
+
+/**
+ *设置登录界面背景颜色
+ */
+.loginBackgroundColor {
+    -fx-background-color: #2D2F33;
+}
+
+/**
+ *登录界面输入框样式
+ */
+.loginTextFieldStyle{
+    -fx-background-color: #292B2F;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #353538;
+}
+
+/**
+ *设置文本框字体颜色
+ */
+.textFieldFontColor{
+    -fx-text-fill: #B2B2B2;
+}
+
+/**
+ *安全登录按钮样式
+ */
+.confirmButton{
+    -fx-text-fill:white;
+    -fx-font-family:"微软雅黑";
+    -fx-border-radius: 4px;
+    -fx-background-color: linear-gradient(#2E4E7E, #2E4E6E);
+}
+
+.disableButton{
+    -fx-text-fill:#B2B2B2;
+    -fx-font-family:"微软雅黑";
+    -fx-border-radius: 4px;
+    -fx-background-color: linear-gradient(#525252, #535353);
+}
+
+/**
+ *登录界面分隔符
+ */
+#loginSeparator{
+    -fx-text-fill: #AAACAF;
+}
+
+/**
+ *设置登录界面用户登录标签颜色和字体大小
+ */
+#userLoginLabel{
+    -fx-text-fill: #AAACAF;
+    -fx-font-size: 30px;
+}
+
+/**
+ *登录界面选择框样式
+ */
+#userLoginCheckBox{
+    -fx-text-fill: #AAACAF;;
+}
+
+/**
+ *设置个股信息界面图片选择按钮样式
+ */
+.stockPictureButton{
+    -fx-background-color: #25272B;
+    -fx-text-fill: #AAACAF;
+    -fx-border-radius: 2px 2px 0px 0px;
+    -fx-background-radius: 2px 2px 0px 0px;
+}
+
+.whiteBackground{
+    -fx-background-color: #B82525;
+}
+
+
+/**
+ *设置scrollPane中scrollBar的样式
+ */
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+    -fx-pref-width: 15px;
+    -fx-pref-height: 15px;
+
+}
+
+.increment-button, .decrement-button {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #353739;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #454749;
+    -fx-background-radius: 5em;
+}
+
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+    -fx-background-color: #2C2E32;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+/**
+ *设置添加对比输入框样式
+ */
+.addCompareTextField{
+    -fx-background-color: #161618;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #B2B2B2;
+}
+
+* .button{
+    -fx-cursor: hand;
+}
+
+*.toggle-button{
+    -fx-cursor: hand;
+}
+
+/**
+ *设置股票切换按钮设置底部边框色
+ */
+.stockRedBottom{
+    -fx-border-color: #B82525;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.compareLabelFontSize{
+    -fx-font-size: 25px;
+}
+
+
+.marketInfoLabelColor{
+    -fx-text-fill: #B2B2B2;
+    -fx-font-weight: bolder;
+    -fx-font-size: 15px;
+
+}
+
+.custom-dashed-border {
+    -fx-border-color: #B2B2B2 ;
+    -fx-border-width: 1 ;
+    -fx-border-style: hidden;
+}
+
+/**
+ *为表格设置样式
+ */
+.chart-vertical-grid-lines {
+    -fx-stroke: #DDDDDD;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #DDDDDD;
+}
+
+/**
+ *设置图表坐标轴的样式
+ */
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: white;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis:top {
+    -fx-border-color: transparent;
+}
+
+.axis:right {
+    -fx-border-color: transparent;
+}
+
+.axis:bottom {
+    -fx-border-color: transparent;
+}
+
+.axis:left {
+    -fx-border-color: transparent;
+}
+
+.chart-plot-background{
+    -fx-border-color: #DDDDDD;
+    -fx-border-width: 1px;
+}
+
+/*.default-color0.chart-series-line {*/
+     /*-fx-stroke: #B82525;*/
+ /*}*/
+/*.default-color1.chart-series-line {*/
+    /*-fx-stroke: #5DB859;*/
+/*}*/
+
+.chart-line-symbol{
+    -fx-background-size: 0;
+}
+
+/*.default-color0.chart-line-symbol {*/
+    /*-fx-background-color: #B82525, white;*/
+/*}*/
+/*.default-color1.chart-line-symbol {*/
+    /*-fx-background-color: #58C648, white;*/
+/*}*/
+
+
+.separator:horizontal .line {
+    -fx-border-color: #343333;
+    -fx-border-width: 2px 0px 0px 0px;
+}
+
+.separator:vertical .line {
+    -fx-border-color: #343333;
+    -fx-border-width: 0px 0px 0px 2px;
+}
+
+/**
+ *设置自定义对话框背景色
+ */
+.myDialogBackground{
+    -fx-background-color: #2B2F33;
+}
+
+.myDialogBottomBorder{
+    -fx-border-color: #333437;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+#rightTableColumn{
+    -fx-border-width: 0;
+}
+
+.logoLabel{
+    -fx-text-fill: #ECECEC;
+    -fx-font-size: 25px;
+    -fx-font-family: serif sans-serif;
+}
+
+/**
+ *设置listview的样式
+ */
+.list-view{
+    -fx-background-color: #2D2F33;
+}
+
+.list-view:focused{
+    -fx-background-insets: 0;
+}
+
+.list-cell {
+    -fx-background: transparent;
+    -fx-text-fill: #7A7C7E;
+    -fx-font-size:17px;
+    -fx-font-family: Tahoma serif;
+    -fx-pref-height: 35px;
+}
+
+.list-view .list-cell:hover{
+    -fx-background-color: #303235;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #303235;
+}
+
+.list-view .list-cell:selected{
+    -fx-background-color: #35373A;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #35373A;
+}
+
+/*.list-view.scroll-bar:horizontal .thumb{*/
+    /*-fx-background-color: #383A3D;*/
+/*}*/
+
+/*.list-view .scroll-bar:horizontal .thumb{*/
+    /*-fx-background-color: #383A3D;*/
+/*}*/
+
+/**
+ *市场信息股票列表内的按钮样式
+ */
+.stockNameButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E6AAD;
+}
+
+.stockNameButton .text:hover{
+    -fx-text-decoration: underline;
+}
+
+.stockNameButton .label:hover{
+    -fx-text-decoration: underline;
+}
+
+/**
+ *设置个股信息界面股票基本信息样式
+ */
+.stockInfoVBoxBackground{
+    -fx-background-color: #202226;
+}
+
+.stockNameLabel{
+    -fx-background-color: transparent;
+    -fx-text-fill: #DCDDE4;
+    -fx-font-size: 22px;
+}
+
+.compareInfoLabel{
+    -fx-text-fill: #DDDDDD;
+    -fx-font-size: 18px;
+}
+
+.stockIdLabel{
+    -fx-background-color: transparent;
+    -fx-text-fill: #DCDDE4;
+    -fx-font-size: 20px;
+}
+
+.stockPriceLabel{
+    -fx-background-color: transparent;
+    -fx-text-fill: #C10D01;
+    -fx-font-size: 30px;
+}
+
+.stockDeclinePriceLabel{
+    -fx-background-color: transparent;
+    -fx-text-fill: #2C7C02;
+    -fx-font-size: 30px;
+}
+
+.stockOpenPrice{
+    -fx-text-fill: #ADAEB4;
+    -fx-font-size: 20px;
+}
+
+.stockOpenPriceLabel{
+    -fx-text-fill: #686A6E;
+    -fx-font-size: 17px;
+}
+
+/**
+ *为股票策略选择界面设置样式
+ */
+.stockChooseLabel{
+    -fx-text-fill: #bbbbbb;
+    -fx-font-size: 18px;
+}
+
+.strategyNameLabel{
+    -fx-text-fill: #BBBBBB;
+    -fx-font-size: 22px;
+}
+
+.strategyNameVBox{
+    -fx-background-color: #282A2D;
+}
+
+.strategyTextField{
+    -fx-background-color: #292B2F;
+}
+
+.strategyWinRateButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E4E70;
+    -fx-font-size: 17px;
+}
+
+/**
+ *为comboBox设置样式
+ */
+.combo-box{
+    -fx-background-color: #161618;
+    -fx-text-fill: #AAACAF;
+    -fx-font-family: "微软雅黑", sans-serif;
+}
+
+.combo-box-popup .list-view{
+    -fx-background-color: #2D2F33;
+    -fx-text-fill: #AAACAF;
+    -fx-font-family: "微软雅黑", sans-serif;
+}
+
+
+
+/**
+ *为checkBox设置样式
+ */
+.check-box > .box {
+    -fx-background-color: #16181B;
+    -fx-border-color: #444444;
+    -fx-border-width: 0.5px;
+    -fx-border-radius: 5px;
+}
+
+.check-box{
+    -fx-text-fill: #bbbbbb;
+}
+
+.check-box > .label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.check-box > .box > .mark {
+}
+
+/*.check-box .mark{*/
+    /*-fx-background-color: white;*/
+/*}*/
+
+.check-box:selected .mark {
+    -fx-background-color: #bbbbbb;
+}
+
+.strategyChooseBox{
+    -fx-background-color: #202226;
+    -fx-border-radius: 2px;
+    -fx-effect: dropshadow(three-pass-box, #16181B, 10, 0.8, 0, 0);
+}
+
+.strategyButton{
+    -fx-text-fill:white;
+    -fx-font-family:"微软雅黑";
+    -fx-font-size: 18px;
+    -fx-border-radius: 4px;
+    -fx-background-color: linear-gradient(#2E4E7E, #2E4E6E);
+}
+
+.strategyButton:hover{
+    -fx-text-fill:white;
+    -fx-font-family:"微软雅黑";
+    -fx-font-size: 18px;
+    -fx-border-radius: 4px;
+    -fx-background-color: linear-gradient(#3A6098, #3A6098);
+}
+
+.strategyInfoLabel{
+    -fx-text-fill: #bbbbbb;
+    -fx-font-size: 15px;
+}
+
+.strategyNumLabel{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 19px;
+}
+
+.strategyProfitLabel{
+    -fx-text-fill: #BBBBBB;
+    -fx-font-size: 19px;
+}
+
+.strategyWinLabel{
+    -fx-text-fill: #BBBBBB;
+    -fx-font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

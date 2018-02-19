@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="960.0" styleClass="navigationBackgroundColor" stylesheets="@../css/Beauty.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.StrategyWinRateUIController">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="960.0">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#back" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="53.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/verticalLine2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="93.0" layoutY="16.0" styleClass="strategyNameLabel" text="超额收益与策略胜率" />
+         </children>
+      </Pane>
+      <Pane prefHeight="436.0" prefWidth="960.0">
+         <children>
+            <Pane layoutX="270.0" layoutY="14.0" prefHeight="400.0" prefWidth="420.0" styleClass="strategyChooseBox">
+               <children>
+                  <ComboBox fx:id="stockPoolComboBox" layoutX="173.0" layoutY="90.0" prefHeight="34.0" prefWidth="180.0" />
+                  <Label layoutX="40.0" layoutY="93.0" styleClass="stockChooseLabel" text="股票池：" />
+                  <Button layoutX="141.0" layoutY="338.0" mnemonicParsing="false" onAction="#toShowChart" prefHeight="35.0" prefWidth="141.0" styleClass="strategyButton" text="显示关系图" />
+                  <Label layoutX="40.0" layoutY="153.0" styleClass="stockChooseLabel" text="回测区间：" />
+                  <DatePicker fx:id="startDatePicker" layoutX="173.0" layoutY="148.0" prefHeight="30.0" prefWidth="180.0" stylesheets="@../css/Main.css" />
+                  <DatePicker fx:id="endDatePicker" layoutX="173.0" layoutY="208.0" prefHeight="30.0" prefWidth="180.0" stylesheets="@../css/Main.css" />
+                  <Label layoutX="40.0" layoutY="34.0" styleClass="stockChooseLabel" text="策略类型：" />
+                  <CheckBox fx:id="strategyCheckBox" layoutX="172.0" layoutY="36.0" mnemonicParsing="false" onAction="#toStrategyBox" text="动量策略" />
+                  <CheckBox fx:id="averageCheckBox" layoutX="303.0" layoutY="36.0" mnemonicParsing="false" onAction="#toAverageBox" text="均值回归" />
+                  <HBox fx:id="strategyHBox" alignment="CENTER" layoutY="242.0" prefHeight="90.0" prefWidth="420.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="formCheckBox" mnemonicParsing="false" onAction="#toForm" text="形成期" />
+                        <CheckBox fx:id="holdCheckBox" mnemonicParsing="false" onAction="#toHold" prefHeight="0.0" prefWidth="74.0" text="持有期" />
+                        <TextField fx:id="holdTextField" prefHeight="34.0" prefWidth="150.0">
+                           <styleClass>
+                              <String fx:value="strategyTextField" />
+                              <String fx:value="textFieldFontColor" />
+                           </styleClass>
+                        </TextField>
+                        <Label styleClass="strategyInfoLabel" text="天" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="averageHBox" layoutY="242.0" prefHeight="90.0" prefWidth="420.0" visible="false">
+                     <children>
+                        <Pane prefHeight="90.0" prefWidth="420.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="33.0" styleClass="stockChooseLabel" text="均线：" />
+                              <Label layoutX="334.0" layoutY="36.0" styleClass="strategyInfoLabel" text="天" />
+                              <ComboBox fx:id="averageComboBox" layoutX="174.0" layoutY="30.0" prefHeight="34.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefWidth="960.0">
+         <children>
+            <HBox fx:id="infoHBox" prefWidth="960.0" visible="false">
+               <children>
+                  <VBox prefWidth="400.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="101.0" prefWidth="400.0" spacing="50.0">
+                           <children>
+                              <Label lineSpacing="4.0" prefHeight="50.0" prefWidth="80.0" styleClass="strategyWinLabel" text="相对强弱计算周期" wrapText="true" />
+                              <Label lineSpacing="4.0" prefHeight="50.0" prefWidth="40.0" styleClass="strategyWinLabel" text="超额收益" wrapText="true" />
+                              <Label lineSpacing="4.0" prefWidth="50.0" styleClass="strategyWinLabel" text="1年内胜率%" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <VBox fx:id="dataVBox" prefWidth="100.0" spacing="8.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="chartVBox" prefWidth="560.0">
+                     <padding>
+                        <Insets top="63.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>

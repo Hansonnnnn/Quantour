@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="970.0" styleClass="navigationBackgroundColor" stylesheets="@../css/Beauty.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.MarketInfoUIController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="970.0" spacing="30.0">
+         <children>
+            <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="271.0" promptText="选择查询日期" stylesheets="@../css/Main.css" />
+            <Button fx:id="searchDateButton" mnemonicParsing="false" onAction="#search" prefWidth="70.0" styleClass="confirmButton" text="查询" />
+         </children>
+         <padding>
+            <Insets left="250.0" />
+         </padding>
+      </HBox>
+      <VBox prefWidth="975.0" spacing="15.0" stylesheets="@../css/Main.css">
+         <children>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Pane prefWidth="950.0">
+                     <children>
+                        <GridPane alignment="CENTER" layoutY="-1.0" prefHeight="90.0" prefWidth="930.0" styleClass="custom-dashed-border">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="220.0" prefWidth="80.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.04693603515625" minWidth="170.48907470703125" prefWidth="218.04693603515625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0185546875" minWidth="87.0" prefWidth="87.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="87.0" prefWidth="87.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowSpan="2">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="91.0" stylesheets="@../css/Beauty.css" text="当日总交易量" textAlignment="CENTER" wrapText="true">
+                                       <styleClass>
+                                          <String fx:value="marketInfoLabelColor" />
+                                          <String fx:value="transButton" />
+                                       </styleClass></Label>
+                                    <Label fx:id="volumeLabel" prefHeight="83.0" prefWidth="106.0" styleClass="transButton" text="Label" textAlignment="CENTER" wrapText="true" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="47.0" prefWidth="368.0" spacing="20.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="涨停股票数">
+                                       <styleClass>
+                                          <String fx:value="marketInfoLabelColor" />
+                                          <String fx:value="transButton" />
+                                       </styleClass></Label>
+                                    <Label fx:id="firstLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="45.0" prefWidth="368.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label styleClass="marketInfoLabelColor" text="跌停股票数" />
+                                    <Label fx:id="secondLabel" styleClass="transButton" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="42.0" prefWidth="368.0" spacing="20.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="25.0" prefWidth="147.0" styleClass="marketInfoLabelColor" text="涨幅超过5%的股票数" textAlignment="CENTER" wrapText="true" />
+                                    <Label fx:id="thirdLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="368.0" spacing="20.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="50.0" prefWidth="153.0" styleClass="marketInfoLabelColor" text="跌幅超过 5%的股票数" textAlignment="CENTER" wrapText="true" />
+                                    <Label fx:id="fourthLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="313.0" spacing="20.0" GridPane.columnIndex="3">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="142.0" styleClass="marketInfoLabelColor" text="#A" textAlignment="CENTER" wrapText="true" />
+                                    <Label fx:id="fifthLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="368.0" spacing="20.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="145.0" styleClass="marketInfoLabelColor" text="#B" textAlignment="CENTER" wrapText="true" />
+                                    <Label fx:id="sixthLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </GridPane>
+                        <Separator prefWidth="940.0" />
+                        <Separator layoutX="220.0" layoutY="50.0" prefWidth="720.0" />
+                        <Separator layoutY="100.0" prefWidth="940.0" />
+                        <Separator orientation="VERTICAL" prefHeight="100.0" />
+                        <Separator layoutX="220.0" orientation="VERTICAL" prefHeight="100.0" />
+                        <Separator layoutX="410.0" orientation="VERTICAL" prefHeight="100.0" />
+                        <Separator layoutX="675.0" layoutY="4.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="940.0" orientation="VERTICAL" prefHeight="100.0" />
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="18.0" prefWidth="970.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="15.0" prefWidth="970.0" spacing="100.0">
+                     <children>
+                        <Label prefHeight="27.0" styleClass="marketInfoLabelColor" text="#A开盘‐收盘大于 5%*上一个交易日收盘价的 股票个数" />
+                        <Label prefHeight="27.0" styleClass="marketInfoLabelColor" text="#B开盘‐收盘小于‐5%*上一个交易日收盘价的股票个数" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="409.0" prefWidth="970.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="412.0" prefWidth="938.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="75.0" sortable="false" text="股票ID" />
+                      <TableColumn fx:id="nameColumn" prefWidth="148.0" sortable="false" text="股票名称" />
+                        <TableColumn fx:id="openColumn" prefWidth="148.0" sortable="false" text="开盘价" />
+                        <TableColumn fx:id="closeColumn" prefWidth="148.0" sortable="false" text="收盘价" />
+                        <TableColumn fx:id="highColumn" prefWidth="148.0" sortable="false" text="最高价" />
+                        <TableColumn fx:id="lowColumn" prefWidth="148.0" sortable="false" text="最低价" />
+                        <TableColumn id="rightTableColumn" fx:id="volumeColumn" minWidth="0.0" prefWidth="106.0" sortable="false" text="成交量" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</VBox>

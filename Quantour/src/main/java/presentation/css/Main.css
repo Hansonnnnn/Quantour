@@ -1,0 +1,183 @@
+.table-view {
+    -fx-background-color: #1A1C20;
+    -fx-table-cell-border-color: rgba(54, 53, 53, 0.93);
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+.table-view > .column-header-background {
+    -fx-pref-height: 35px;
+    -fx-background-color: #1C1F22;
+}
+
+.table-view .column-header,.filler{
+     -fx-background-color: #1C1F22;
+ }
+.table-view.column-header,.label{
+    -fx-background-color: #1C1F22;
+}
+/*.table-view .column-header-background {*/
+    /*-fx-background-color: linear-gradient(#131313 0%, #424141 100%);*/
+/*}*/
+
+/*.table-view > .column-header-background{*/
+/*-fx-background-color:  #1A1C20;*/
+/*}*/
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #AAACAF;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #999999;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #1A1C20;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    /*-fx-pref-height: 40px;*/
+    -fx-alignment: center;
+    /*-fx-padding-left:10px;*/
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #1C1F22;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #323437;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #323437;
+}
+
+.table-row-cell:hover{
+    -fx-background-color: #323437;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #323437;
+}
+
+#deleteButtonColumn{
+    -fx-alignment: center;
+}
+/*************tableView结束**************/
+
+.combo-box-base:editable > .arrow-button,
+.date-picker > .arrow-button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 1 1 1 0, 1, 2;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0;
+}
+
+.combo-box-base:editable > .text-field,
+.date-picker > .text-field {
+    -fx-background-color: #161618;
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 2 0 0 2;
+}
+
+.date-picker > .text-field {
+    -fx-border-color: #161618;
+    -fx-text-fill: #AAACAF;
+}
+
+.date-picker > .text-field:selected {
+    -fx-border-color: #161618;
+}
+
+.date-picker-popup {
+    -fx-control-inner-background: #161618;
+    -fx-control-inner-border-color: #161618;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #161618;
+    -fx-border-color: #161618;
+}
+
+/*.date-picker-popup >  .spinner{*/
+/*-fx-background-color:#161618 ;*/
+/*}*/
+
+/*.date-picker-popup > .calendar-grid{*/
+/*-fx-background-color: #161618;*/
+/*-fx-text-fill: red;*/
+/*}*/
+
+.date-picker-popup > * > .date-cell {
+    -fx-background-color: #161618;
+    -fx-border-color: #AAACAF;
+    -fx-text-fill: #AAACAF;
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #243C62;
+}
+
+.combo-box-base {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.combo-box-base:editable > .arrow-button {
+    -fx-border-color: #161618;
+    -fx-background-color: #161618;
+}
+
+.date-picker:editable > .arrow-button:hover {
+    -fx-border-color: black;
+    -fx-background-color: black;
+}
+
+.date-picker:editable > .arrow-button > .arrow:hover {
+    -fx-border-color: #243C62;
+    -fx-background-color: #243C62;
+}
+
+.date-picker-popup > * > .spinner > .button:hover {
+
+    -fx-background-color: #243C62;
+}
+
+/*.combo-box-base:editable:contains-focus,*/
+/*.date-picker:contains-focus {*/
+/*-fx-background-color: -fx-focus-color;*/
+/*-fx-background-insets: -0.2;*/
+/*-fx-background-radius: 3;*/
+/*}*/
+/*.combo-box-base:editable:focused > .text-field,*/
+/*.combo-box-base:editable > .text-field:focused,*/
+/*.date-picker:focused > .text-field,*/
+/*.date-picker > .text-field:focused {*/
+/*-fx-background-color:*/
+/*-fx-control-inner-background,*/
+/*-fx-faint-focus-color,*/
+/*linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);*/
+/*-fx-background-insets: 1 0 1 1, 1 0 1 1, 3 2 3 3;*/
+/*-fx-background-radius: 2 0 0 2, 1 0 0 1, 0;*/
+/*}*/
+/*.combo-box-base:editable:contains-focus > .arrow-button,*/
+/*.date-picker:contains-focus > .arrow-button {*/
+/*-fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;*/
+/*-fx-background-insets: 1, 2, 1, 2.6;*/
+/*-fx-background-radius: 0 2 2 0, 0 1 1 0, 0 1 1 0, 0 1 1 0;*/
+/*}*/
+
+.trolleyButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #79797A;
+    /*-fx-pref-width: 30px;*/
+    /*-fx-pref-height: 30px;*/
+    /*-fx-background-image: url("../image/selectButton.png");*/
+}

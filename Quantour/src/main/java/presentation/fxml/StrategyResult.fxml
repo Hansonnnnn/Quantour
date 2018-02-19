@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="960.0" styleClass="navigationBackgroundColor" stylesheets="@../css/Beauty.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.StrategyResultUIController">
+   <children>
+      <Pane prefHeight="63.0" prefWidth="960.0">
+         <children>
+            <Button layoutX="5.0" layoutY="10.0" mnemonicParsing="false" onAction="#back" styleClass="transButton">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/verticalLine2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="85.0" layoutY="21.0" styleClass="strategyNameLabel" text="回测结果" />
+         </children>
+      </Pane>
+      <HBox prefHeight="100.0" prefWidth="960.0" styleClass="stockRedBottom">
+         <children>
+            <Pane prefHeight="114.0" prefWidth="362.0">
+               <children>
+                  <Button layoutY="62.0" mnemonicParsing="false" onAction="#toAccumulativeRate" prefHeight="35.0" styleClass="stockPictureButton" text="累计收益率" />
+                  <Button layoutX="103.0" layoutY="62.0" mnemonicParsing="false" onAction="#toDistribution" prefHeight="35.0" styleClass="stockPictureButton" text="收益率分布" />
+                  <Button fx:id="sliderButton" layoutY="62.0" mnemonicParsing="false" prefHeight="35.0" text="累计收益率">
+                     <styleClass>
+                        <String fx:value="stockPictureButton" />
+                        <String fx:value="whiteBackground" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </HBox>
+      <Pane prefWidth="200.0">
+         <children>
+            <VBox fx:id="accumulateVBox" layoutY="10.0">
+               <children>
+                  <Pane prefHeight="97.0" prefWidth="960.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="4.0" styleClass="strategyInfoLabel" text="年化收益率" />
+                        <Label fx:id="yearRateLabel" layoutX="50.0" layoutY="39.0" styleClass="strategyNumLabel" text="35.7%" />
+                        <Label layoutX="172.0" layoutY="4.0" styleClass="strategyInfoLabel" text="基准年化收益率" />
+                        <Label fx:id="baseRateLabel" layoutX="172.0" layoutY="39.0" styleClass="strategyNumLabel" text="12.4%" />
+                        <Label layoutX="334.0" layoutY="4.0" styleClass="strategyInfoLabel" text="阿尔法" />
+                        <Label fx:id="alphaLabel" layoutX="334.0" layoutY="39.0" styleClass="strategyNumLabel" text="14.6%" />
+                        <Label layoutX="456.0" layoutY="4.0" styleClass="strategyInfoLabel" text="贝塔" />
+                        <Label layoutX="558.0" layoutY="4.0" styleClass="strategyInfoLabel" text="夏普比率" />
+                        <Label fx:id="betaLabel" layoutX="457.0" layoutY="39.0" styleClass="strategyNumLabel" text="0.97" />
+                        <Label fx:id="sharpLabel" layoutX="558.0" layoutY="39.0" styleClass="strategyNumLabel" text="1.29" />
+                        <Label layoutX="699.0" layoutY="4.0" styleClass="strategyInfoLabel" text="最大回撤" />
+                        <Label fx:id="retreatLabel" layoutX="702.0" layoutY="39.0" styleClass="strategyNumLabel" text="23.8%" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="distributionVBox" layoutY="10.0" prefWidth="960.0" visible="false">
+               <children>
+                  <Pane prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="20.0" styleClass="strategyProfitLabel" text="相对指数收益分布图：" />
+                        <Label layoutX="245.0" layoutY="20.0" styleClass="strategyProfitLabel" text="正收益周期数：" />
+                        <Label fx:id="positiveProfitLabel" layoutX="387.0" layoutY="20.0" styleClass="strategyProfitLabel" text="132" />
+                        <Label layoutX="420.0" layoutY="20.0" styleClass="strategyProfitLabel" text="，负收益周期数： " />
+                        <Label fx:id="nagivateProfitLabel" layoutX="578.0" layoutY="20.0" styleClass="strategyProfitLabel" text="118" />
+                        <Label layoutX="621.0" layoutY="20.0" styleClass="strategyProfitLabel" text="。赢率：" />
+                        <Label fx:id="winRateLabel" layoutX="712.0" layoutY="20.0" styleClass="strategyProfitLabel" text="52.80%" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>

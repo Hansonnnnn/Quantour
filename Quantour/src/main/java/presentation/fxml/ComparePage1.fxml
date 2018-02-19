@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="960.0" spacing="15.0" styleClass="navigationBackgroundColor" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.ComparePageUIController">
+   <children>
+      <VBox prefHeight="102.0" prefWidth="960.0">
+         <children>
+            <GridPane hgap="10.0" vgap="10.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label styleClass="headFontColor" text="股票1" />
+                        <TextField fx:id="idTextField1" prefHeight="35.0" prefWidth="200.0" promptText="请输入股票名称或ID">
+                           <styleClass>
+                              <String fx:value="loginTextFieldStyle" />
+                              <String fx:value="textFieldFontColor" />
+                           </styleClass>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label styleClass="headFontColor" text="股票2" />
+                        <TextField fx:id="idTextField2" prefHeight="35.0" prefWidth="200.0" promptText="请输入股票名称或ID">
+                           <styleClass>
+                              <String fx:value="loginTextFieldStyle" />
+                              <String fx:value="textFieldFontColor" />
+                           </styleClass>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowSpan="2">
+                     <children>
+                        <Button fx:id="compareButton" minHeight="35.0" minWidth="60.0" mnemonicParsing="false" onAction="#compare" styleClass="strategyButton" text="比较" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label styleClass="headFontColor" text="开始日期" />
+                        <DatePicker fx:id="startDatePicker" prefHeight="35.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label styleClass="headFontColor" text="结束日期" />
+                        <DatePicker fx:id="endDatePicker" prefHeight="35.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets left="100.0" right="100.0" top="15.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="282.0" prefWidth="960.0" spacing="100.0">
+         <children>
+            <Pane prefHeight="280.0" prefWidth="260.0" styleClass="strategyChooseBox">
+               <children>
+                  <Label fx:id="stockNameOneLabel" layoutX="17.0" layoutY="14.0" text="股票1名称">
+                     <styleClass>
+                        <String fx:value="marketInfoLabelColor" />
+                        <String fx:value="stockNameLabel" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="70.0" styleClass="marketInfoLabelColor" text="最高价：" />
+                  <Label layoutX="22.0" layoutY="115.0" styleClass="marketInfoLabelColor" text="最低价：" />
+                  <Label layoutX="21.0" layoutY="160.0" styleClass="marketInfoLabelColor" text="涨幅/跌幅(%)：" />
+                  <Label layoutX="22.0" layoutY="205.0" styleClass="marketInfoLabelColor" text="对数收益率方差：" />
+                  <Label fx:id="oneHighLabel" layoutX="97.0" layoutY="68.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="oneLowLabel" layoutX="97.0" layoutY="113.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="oneUpDownLabel" layoutX="136.0" layoutY="158.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="logLabel1" layoutX="154.0" layoutY="203.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Button layoutX="172.0" layoutY="14.0" mnemonicParsing="false" onAction="#toStock1Detail" styleClass="confirmButton" text="股票详情" />
+               </children>
+            </Pane>
+            <Pane prefHeight="290.0" prefWidth="260.0" styleClass="strategyChooseBox">
+               <children>
+                  <Label fx:id="stockNameTwoLabel" layoutX="25.0" layoutY="14.0" text="股票2名称">
+                     <styleClass>
+                        <String fx:value="marketInfoLabelColor" />
+                        <String fx:value="stockNameLabel" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="70.0" styleClass="marketInfoLabelColor" text="最高价：" />
+                  <Label layoutX="22.0" layoutY="115.0" styleClass="marketInfoLabelColor" text="最低价：" />
+                  <Label layoutX="22.0" layoutY="160.0" styleClass="marketInfoLabelColor" text="涨幅/跌幅(%)：" />
+                  <Label layoutX="22.0" layoutY="205.0" styleClass="marketInfoLabelColor" text="对数收益率方差：" />
+                  <Label fx:id="twoHighLabel" layoutX="97.0" layoutY="68.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="twoLowLabel" layoutX="97.0" layoutY="113.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="twoUpDownLabel" layoutX="136.0" layoutY="158.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Label fx:id="logLabel2" layoutX="154.0" layoutY="203.0" styleClass="compareInfoLabel" text="暂无" />
+                  <Button layoutX="172.0" layoutY="14.0" mnemonicParsing="false" onAction="#toStock2Detail" styleClass="confirmButton" text="股票详情" />
+               </children>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <VBox>
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="975.0" spacing="8.0" styleClass="stockRedBottom">
+               <children>
+                  <Pane prefHeight="60.0" prefWidth="236.0">
+                     <children>
+                        <ToggleButton fx:id="closeValueButton" disable="true" layoutY="25.0" mnemonicParsing="false" onAction="#toCloseValueChart" prefHeight="35.0" prefWidth="100.0" styleClass="stockPictureButton" text="收盘价" />
+                        <ToggleButton fx:id="logValueButton" disable="true" layoutX="108.0" layoutY="25.0" mnemonicParsing="false" onAction="#toLogValueChart" prefHeight="35.0" prefWidth="100.0" styleClass="stockPictureButton" text="对数收益率" />
+                        <Button fx:id="sliderLabel" disable="true" layoutY="25.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" text="收盘价">
+                           <styleClass>
+                              <String fx:value="stockPictureButton" />
+                              <String fx:value="whiteBackground" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <HBox fx:id="nameHBox" alignment="BOTTOM_RIGHT" prefHeight="60.0" prefWidth="642.0" visible="false">
+                     <children>
+                        <Label fx:id="biggerNameLabelOne" text="真皮沙发">
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldFontColor" />
+                              <String fx:value="compareLabelFontSize" />
+                           </styleClass>
+                        </Label>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/vs.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="biggerNameLabelTwo" text="中山桥一霸">
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="textFieldFontColor" />
+                              <String fx:value="compareLabelFontSize" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="50.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="1.0" left="50.0" />
+               </padding>
+            </HBox>
+            <VBox fx:id="chartVBox" alignment="CENTER">
+               <children>
+                  <VBox prefWidth="100.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/Beauty.css" />
+      <URL value="@../css/Main.css" />
+   </stylesheets>
+</VBox>

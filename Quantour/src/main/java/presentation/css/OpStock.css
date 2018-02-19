@@ -1,0 +1,97 @@
+/**
+ *为自选股列表框设置样式
+ */
+.stockIdLabel{
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 22px;
+}
+
+.opStockHeadVBoxBackground{
+    -fx-background-color: #292B2F;
+}
+
+.table-view {
+    -fx-background-color: #2D2F33;
+    -fx-table-cell-border-color: rgba(54, 53, 53, 0.93);
+}
+
+.table-view > .column-header-background {
+    -fx-pref-height: 35px;
+    -fx-background-color: #2D2F33;
+}
+.table-view .column-header,.filler{
+    -fx-background-color: #2D2F33;
+}
+
+.table-view.column-header,.label{
+    -fx-background-color: #2D2F33;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #AAACAF;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-pref-height: 35px;
+    -fx-text-fill: #999999;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #2D2F33;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-alignment: center;
+}
+
+.table-row-cell:even {
+    -fx-background-color: -fx-table-cell-border-color, #303236;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #323438;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #323438;
+}
+
+.table-row-cell:hover{
+    -fx-background-color: #323438;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-table-cell-border-color: #323438;
+}
+
+.deleteAllStockButton{
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E4E70;
+}
+
+*.button{
+    -fx-cursor: hand;
+}
+
+.default-color0.chart-series-line {
+    -fx-stroke: #3180CD;
+}
+
+/*.data0.chart-bar{*/
+    /*-fx-background-color: #B82525;*/
+/*}*/
+
+/*.data1.chart-bar{*/
+    /*-fx-background-color: #5DB859;*/
+/*}*/
+.default-color0.chart-bar{
+    -fx-background-color: #B82525;
+}
+
+.default-color1.chart-bar{
+    -fx-background-color: #5DB859;
+}

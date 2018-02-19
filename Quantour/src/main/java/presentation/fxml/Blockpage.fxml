@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.BlockPageUIController">
+   <children>
+      <VBox alignment="CENTER" maxWidth="960.0" prefHeight="650.0" prefWidth="960.0" styleClass="navigationBackgroundColor">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" maxHeight="47.0" minHeight="47.0" prefHeight="47.0" prefWidth="975.0" spacing="8.0" styleClass="stockRedBottom">
+               <children>
+                  <Pane prefHeight="15.0" prefWidth="1580.0">
+                     <children>
+                        <ToggleButton fx:id="allStocksButton" layoutY="9.0" mnemonicParsing="false" onAction="#allStocks" prefHeight="35.0" prefWidth="100.0" styleClass="stockPictureButton" text="全部股票" />
+                        <ToggleButton fx:id="mainBlockButton" layoutX="108.0" layoutY="9.0" mnemonicParsing="false" onAction="#mainBlock" prefHeight="35.0" prefWidth="100.0" styleClass="stockPictureButton" text="主板" />
+                        <ToggleButton fx:id="zxBlockButton" layoutX="216.0" layoutY="9.0" mnemonicParsing="false" onAction="#zxBlock" prefHeight="35.0" prefWidth="101.0" styleClass="stockPictureButton" text="中小板" />
+                        <ToggleButton fx:id="cyBlockButton" layoutX="327.0" layoutY="9.0" mnemonicParsing="false" onAction="#cyBlock" prefHeight="35.0" prefWidth="101.0" styleClass="stockPictureButton" text="创业板" />
+                        <Button fx:id="sliderLabel" layoutY="9.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" text="全部股票">
+                           <styleClass>
+                              <String fx:value="stockPictureButton" />
+                              <String fx:value="whiteBackground" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="1.0" left="50.0" />
+               </padding>
+            </HBox>
+            <HBox fillHeight="false" minHeight="600.0" prefHeight="607.0" prefWidth="921.0">
+               <children>
+                  <TableView fx:id="tableView" minHeight="600.0" prefHeight="510.0" prefWidth="961.0">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" sortable="false" text="股票ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="136.70426177978516" sortable="false" text="股票名称" />
+                        <TableColumn fx:id="openColumn" prefWidth="125.0" sortable="false" text="开盘价" />
+                        <TableColumn fx:id="closeColumn" prefWidth="125.0" sortable="false" text="收盘价" />
+                        <TableColumn fx:id="highColumn" prefWidth="125.0" sortable="false" text="最高价" />
+                        <TableColumn fx:id="lowColumn" prefWidth="125.0" sortable="false" text="最低价" />
+                        <TableColumn id="rightTableColumn" fx:id="volumeColumn" minWidth="0.0" prefWidth="147.0" sortable="false" text="成交量" />
+                        <TableColumn fx:id="selectButtonColumn" text="加入自选" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+         </children>
+         <stylesheets>
+            <URL value="@../css/Beauty.css" />
+            <URL value="@../css/Main.css" />
+         </stylesheets>
+      </VBox>
+   </children>
+</Pane>
